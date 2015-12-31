@@ -1,0 +1,23 @@
+<div class="container">
+
+  <h3>Your post has been created! use this url to edit/delete your post...</h3> <h2>http://127.0.0.1:9393/<%= @article.randurl %>/edit</h2>
+  <h2> <%= @article.title %> </h2>
+  <h4> <%= @article.description %> </h4>
+  <h5> <%= @article.email %> </h5>
+<br>
+<h6>created: <%= @article.created_at %> </h6>
+<% if @article.updated_at != @article.created_at %>
+<h6>last updated: <%= @article.updated_at %> </h6>
+<% end %>
+
+<form action="<%= @article.slug %>/edit" method='get'>
+  <input type="submit" value="edit">
+</form>
+<br>
+<form action="<%= @article.slug %>/delete" method='post'>
+  <input type="hidden" name="_method"  value="delete">
+  <input type="submit" value="delete">
+</form>
+</div>
+
+<a href="/<%= "#{@category}" %>"><--back</a>

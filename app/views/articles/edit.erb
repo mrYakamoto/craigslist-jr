@@ -1,0 +1,31 @@
+<!--
+params[:category] = "jobs"
+params[:article] = article.slug
+-->
+
+<form action="/<%= @article.randurl %>/edit" method ="post">
+  <input type="hidden" name="_method" value="put">
+  <input type="hidden" name="article_id" value="<%= @article.id %>">
+
+  <label for="title">Title: </label>
+  <br>
+  <input type="text" name="title" value="<%= @article.title %>">
+  <br>
+  <br>
+  <label for="description">Description: </label>
+  <br>
+  <textarea name="description"><%= @article.description %></textarea>
+  <br>
+  <br>
+  <label for="email">Email: </label>
+  <br>
+  <input type="text" name="email" value="<%= @article.email %>">
+  <br>
+  <br>
+  <input type="submit" value="finish editing">
+</form>
+
+<form action="/<%= @article.randurl %>/delete" method='post'>
+  <input type="hidden" name="_method"  value="delete">
+  <input type="submit" value="delete">
+</form>

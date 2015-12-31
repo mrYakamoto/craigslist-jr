@@ -1,4 +1,6 @@
-get '/' do
-  # Look in app/views/index.erb
+get "/" do
+  @categories = Category.all
   erb :index
 end
+
+
