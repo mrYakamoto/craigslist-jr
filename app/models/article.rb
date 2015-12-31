@@ -7,7 +7,7 @@ class Article < ActiveRecord::Base
   before_save :create_randurl
 
   def create_randurl
-    self.randurl = SecureRandom.urlsafe_base64(10)
+    self.randurl ||= SecureRandom.urlsafe_base64(10)
   end
 
 end
