@@ -1,0 +1,7 @@
+<div class="container">
+  <h2><%= @category.title %></h2>
+   <% @articles.each do |article| %>
+   <% category = Category.find_by(id: article.category_id) %>
+  <h3> <a href="/<%= "#{category.title}/#{article.slug}" %>" ><%= article.title %></a> </h3>
+  <% end %>
+</div>

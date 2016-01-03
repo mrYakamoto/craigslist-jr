@@ -1,0 +1,26 @@
+<h2> Create a new listing </h2>
+
+<form action='/article/new' method='post'>
+
+  <label for="category">Category: </label>
+  <select name="category">
+    <option value="housing">housing</option>
+    <option value="jobs">jobs</option>
+    <option value="for sale">for sale</option>
+    <option value="personals">personals</option>
+    <option value="community">community</option>
+    <option value="services">services</option>
+  </select> <br><br>
+
+  <label for="title">Title: </label> <br>
+  <input type="text" name="title"> <br><br>
+
+  <label for="description">Description: </label> <br>
+  <textarea name="description"></textarea> <br>
+
+  <label for="email">Email: </label> <br>
+  <input type="text" name="email"> <br><br>
+
+  <input type="submit" value="Create">
+
+</form>
